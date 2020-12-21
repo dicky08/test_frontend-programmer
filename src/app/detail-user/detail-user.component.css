@@ -1,0 +1,48 @@
+.bg-profile {
+  background-color: rgb(247, 246, 245);
+  border-radius: 10px;
+  margin-top: 70px;
+}
+.navbar-color {
+  background-color: rgb(255, 71, 71);
+}
+.bg-cover {
+  background-image: url('../../assets/img/cover.png');
+}
+.bg-cover h1 {
+  font-size: 65px;
+  color: rgb(165, 162, 162);;
+}
+.card-post-profile{
+  overflow: hidden;
+}
+#profile {
+  margin-top: -10px;
+}
+@media(max-width: 500px) {
+  .navbar-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(255, 71, 71);
+  }
+ .bg-cover { 
+    display: none;
+  }
+}
+@media(max-width: 570px) {
+ .bg-cover { 
+    display: none;
+  }
+}
+@media(max-width: 760px) {
+ .bg-cover { 
+    display: none;
+  }
+}
+@media(max-width: 992px) {
+ .bg-cover { 
+    display: none;
+  }
+}

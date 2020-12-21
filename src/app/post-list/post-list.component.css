@@ -1,0 +1,57 @@
+.bg-card {
+  background-color:rgba(252, 247, 247, 0.747);
+}
+.card-header {
+  background-color:rgba(252, 247, 247, 0.747);
+}
+.list-group {
+  overflow-y: scroll;
+  height: 70vh;
+  cursor: pointer;
+}
+.list-group::-webkit-scrollbar{
+  height: 0;
+  width: 6px;
+}
+.list-group::-webkit-scrollbar-thumb{
+background-color: #b6b1b1;
+}
+.list-group-item {
+  cursor: pointer;
+}
+.list-group-item:hover {
+  background-color: rgb(247, 236, 236);
+}
+.card-body  {
+  overflow: hidden;
+  height: 300px;
+  background-position: 100px 100px;
+}
+.footer {
+  color: black;
+  background-color: white;
+}
+
+/* .bg-profile {
+  background-color: silver;
+  border-radius: 20px;
+  height: 100vh;
+  position: absolute;
+  top: 50px;
+}
+.bg-latar {
+  position: absolute;
+
+} */
+@media(max-width: 500px) {
+  .navbar-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(255, 71, 71);
+  }
+  .list-groups {
+    display: none;
+  }
+}

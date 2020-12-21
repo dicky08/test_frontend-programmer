@@ -1,0 +1,12 @@
+<div class="row mt-5">
+  <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3" *ngFor="let user of dataUser.data">
+    <div class="card mb-1\2">
+      <img src="{{user.picture}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">{{user.firstName}} {{user.lastName}}</p>
+        <small><p class="card-text  mt-n2 mb-3" style="font-size: 12px;">{{user.email}}</p></small>
+        <a routerLink="/detail-user/{{user.id}}"><i class="fa fa-eye"></i> Detail User</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+body {
+  background-color: tomato;
+}
+@media(max-width:500px) {
+  .bg-text {
+    margin-top: 20px;
+  }
+}

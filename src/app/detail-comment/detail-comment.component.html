@@ -1,0 +1,23 @@
+<div class="row mt-5" *ngIf="dataComent.data.length > 0; else noData">
+    <div class="col-lg-3 col-12 col-sm-6 col-md-6 mt-5 mr-5" *ngFor="let item of dataComent.data" >
+      <div class="card " style="height: 225px; width: 350px;" >
+        <div class="card-body ">
+          <div class="profile-comment d-flex justify-content-start align-items-center mb-3 ">
+            <img src="{{item.owner.picture}}" alt="msg-profile" width="60px" height="60px" class="rounded-circle mr-3">
+            <div class="title">
+              <h6 class="card-title mt-1">{{item.owner.firstName}} {{item.owner.firstName}}</h6>
+              <p class=" mt-n2">{{item.publishDate}}</p>
+            </div>
+          </div>
+          <p class="card-text">{{item.message}}.</p>
+          <a routerLink="/post-list" class="btn btn-danger btn-sm"><i class="fa fa-eye"></i>See More Post</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noData>
+    <div class="notFound mt-5">
+      <img src="../../assets/img/notfound.svg" width="100%" height="300px" class="mt-5">
+      <h4 class="text-center text-danger"><b>Data Not Found</b></h4>
+    </div>
+  </ng-template>

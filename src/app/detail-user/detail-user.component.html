@@ -1,0 +1,96 @@
+<section id="profile">
+  <div class="row mt-5">
+    <div class="col-lg-3 ml-4">
+      <div class="container bg-profile shadow">
+        <div class="user-profile  d-flex justify-content-center align-items-center">
+          <img src="{{dataUser.picture}}" width="140px" height="140px" class="rounded-circle  mt-4">
+        </div>
+        <div class="text-profile d-flex justify-content-center align-items-center flex-column mt-2">
+          <h6>{{dataUser.firstName}} {{dataUser.lastName}}</h6>
+          <div class="gender d-flex justify-content-lg-around mb-2" *ngIf="dataUser.  gender=='male'">
+            <i class="fa fa-mars"></i>
+            <small><p>{{dataUser.gender}}</p></small>
+          </div>
+          <div class="gender d-flex justify-content-lg-around mb-2" *ngIf="dataUser.  gender=='female'">
+            <i class="fa fa-venus"></i>
+            <small><p class="ml-2">{{dataUser.gender}}</p></small>
+          </div>
+          <div class="birthday d-flex justify-content-around mt-n2">
+            <i class="far fa-calendar-alt"></i>
+            <small><p class="ml-2">{{resultBirth}}</p></small>
+          </div>
+        </div>
+        <hr>
+        <div class="text-left-profile pb-3">
+          <small>
+            <div class="mail d-flex justify-content-start">
+              <i class="fa fa-envelope"></i>
+              <small><p class="ml-2">{{dataUser.email}}</p></small>
+            </div>
+            <div class="phone d-flex justify-content-start">
+              <i class="fa fa-phone"></i>
+              <small><p class="ml-2">{{dataUser.phone}}</p></small>
+            </div>
+            <div class="regis d-flex justify-content-start">
+              <img src="https://img.icons8.com/ios-filled/24/000000/sign-up-in-calendar.png" width="15px" height="15px"/>
+              <small><p class="ml-2">{{dataUser.registerDate}}</p></small>
+            </div>
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 ml-3 bg-latar mt-5">
+      <div class="card bg-cover text-white" style="height: 180px;">
+        <h1 class="d-flex justify-content-center align-items-center" style="line-height: 180px;">Holla pet</h1>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-8">
+          <div class="card mb-3 card-post-profile shadow" *ngFor="let post of dataPost.data">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <div class="img-post-user"></div>
+                <img src="{{post.image}}" class="card-img img-responsive" height="100%" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="title d-flex justify-content-between">
+                    <h6 class="card-title">{{post.owner.firstName}}</h6>
+                  </div>
+                  <small><p class="card-text mb-2"> {{post.text}} </p></small>
+                  <div class="footer d-flex justify-content-between">
+                    <div class="element ml-2 mt-2">
+                      <i class="fa fa-heart"></i>
+                      <i class="fa fa-paper-plane ml-2"></i>
+                      <i class="far fa-comment ml-2 "></i>
+                      <small><p> <bold>{{post.likes}} Likes</bold> </p></small>
+                      <a routerLink="/comment/{{post.id}}"><small><p class="tag mt-n3"> View coment</p></small></a>
+                      <a class="tag mt-n4">
+                        <small class="d-flex flex-row mt-n2">
+                        <p>#animal</p>
+                        <p>#water</p>
+                        <p>#lee</p>
+                        </small>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="card-text text-right"><small class="text-muted">{{post.publishDate}}</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="img-map">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?markers=Andaluc%C3%ADa,4944,%20Calle%20de%20Atocha,Las%20Palmas%20de%20Gran%20Canaria,Spain&center=Andaluc%C3%ADa,4944,%20Calle%20de%20Atocha,Las%20Palmas%20de%20Gran%20Canaria,Spain&zoom=8&size=600x300&key=AIzaSyD9dyB7_5evAcVtSOf92NlVO8Cp0OdEwTA" alt="" height="100%" width="100%">
+          </div>
+          <div class="title-map mt-3">
+            <small><h4>Address</h4></small>
+            <small><p>State : <b> {{dataUser.location.state}}, {{dataUser.location.street}}</b> </p></small>
+            <small><p class="mt-n2">City : <b>{{dataUser.location.city}}</b> </p></small>
+            <small><p class="mt-n2">Country : <b>{{dataUser.location.country}}</b> </p></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

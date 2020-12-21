@@ -1,0 +1,29 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-color" >
+  <div class="container">
+      <a class="navbar-brand" routerLink="">
+        <b class="text-white"><i class="fa fa-paw" style="font-size: 20px;"></i> <small> Holla Pet</small></b>
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+          <a class="nav-link text-white " routerLink=""><i class="fa fa-home"></i> Home</a>
+          <a class="nav-link text-white " routerLink="post-list"><i class="fa fa-clone"></i> Post List</a>
+          <a class="nav-link text-white " routerLink="/user-list"><i class="fa fa-user"></i> User List</a>
+        <a class="ml-3"> 
+          <div class="input-group flex-nowrap">
+            <input type="text" (keyup)="serchTag($event)" class="form-control" placeholder="Search by Tag" aria-label="Search by Tag" aria-describedby="addon-wrapping">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="addon-wrapping">
+               <i class="fa fa-search" (click)="tagSearch($event)"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
